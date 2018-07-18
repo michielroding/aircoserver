@@ -1,6 +1,5 @@
-
 #define RECV_PIN 14 // D5
-#define SEND_PIN 12 // D6
+#define SEND_PIN 15 // D6
 
 #include <ESP8266WebServer.h>
 #include <WebSocketsServer.h>
