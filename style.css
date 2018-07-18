@@ -1,0 +1,173 @@
+#remote {
+    border        : 3px solid dimgrey;
+    border-radius : 12px;
+    padding       : 12px;
+}
+
+#mode {
+    font-size : 40px;
+    color     : darkgrey;
+}
+
+#mode > * {
+    cursor : pointer;
+}
+
+#mode .active {
+    color : black;
+}
+
+#mode .auto {
+    font-family : Nova Mono;
+}
+
+#temperature {
+    font-family : Nova Mono;
+    font-size   : 90px;
+    color       : black;
+}
+
+#temperature > #degrees {
+    font-family : Nova Mono;
+    font-size   : 90px;
+    border      : none;
+    width       : 1.3em;
+}
+
+#temperature > .unit {
+    color : darkgrey;
+}
+
+#fan-speed {
+    position    : relative;
+    width       : 90px;
+    margin-left : 120px;
+}
+
+#fan-speed img {
+    position : absolute;
+    top      : 11px;
+    right    : 14px;
+}
+
+#fan-speed .ring {
+    position      : absolute;
+    top           : 0;
+    right         : 0;
+    border        : 3px solid darkgrey;
+    border-top    : none;
+    border-bottom : none;
+}
+
+#fan-speed .ring.active {
+    border-color : black;
+}
+
+#fan-speed .ring_1 {
+    top           : 10px;
+    right         : 10px;
+    width         : 22px;
+    height        : 22px;
+    border-radius : 11px;
+}
+
+#fan-speed .ring_2 {
+    top           : 5px;
+    right         : 5px;
+    width         : 32px;
+    height        : 32px;
+    border-radius : 16px;
+}
+
+#fan-speed .ring_3 {
+    width         : 42px;
+    height        : 42px;
+    border-radius : 21px;
+}
+
+#state {
+    margin-left : 85px;
+    position    : relative;
+    width       : 80px;
+}
+
+#state > i {
+    position  : absolute;
+    font-size : 40px;
+    color     : red;
+    cursor    : pointer;
+}
+
+#state > i.active {
+    color : black;
+}
+
+#airflow {
+    position : relative;
+    width    : 40px;
+    height   : 40px;
+}
+
+#airflow .active {
+    background : black !important;
+}
+
+#airflow > * {
+    position : absolute;
+    top      : 0;
+    right    : 0;
+}
+
+#airflow .core {
+    width         : 9px;
+    height        : 9px;
+    background    : transparent;
+    border-radius : 0 0 0 9px;
+    z-index       : 3;
+}
+
+#airflow .helper {
+    width          : 11px;
+    height         : 11px;
+    background     : white;
+    border-radius  : 0 0 0 11px;
+    z-index        : 2;
+    animation-name : none;
+}
+
+#airflow .boost {
+    width         : 15px;
+    height        : 15px;
+    background    : darkgrey;
+    border-radius : 0 0 0 15px;
+}
+
+#airflow .dir {
+    width      : 20px;
+    height     : 2px;
+    background : darkgrey;
+    right      : 18px;
+}
+
+#airflow .dir_1 {
+}
+
+#airflow .dir_2 {
+    transform : translate(1px, 8px) rotate(-18deg);
+}
+
+#airflow .dir_3 {
+    transform : translate(4px, 16px) rotate(-36deg);
+}
+
+#airflow .dir_4 {
+    transform : translate(10px, 22px) rotate(-54deg);
+}
+
+#airflow .dir_5 {
+    transform : translate(19px, 26px) rotate(-72deg);
+}
+
+#airflow .dir_6 {
+    transform : translate(27px, 27px) rotate(-90deg);
+}

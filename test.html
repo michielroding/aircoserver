@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Airco Server</title>
+    <link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.min.css">
+</head>
+<body>
+<div id="remote">
+    <div id="mode">
+        <i class="fas fa-asterisk" data-mode="wind"></i>
+        <i class="fas fa-sun" data-mode="warm"></i>
+        <span class="auto" data-mode="auto">A</span>
+        <i class="fas fa-snowflake" data-mode="cold"></i>
+        <i class="fas fa-tint" data-mode="rain"></i>
+    </div>
+
+    <div id="temperature">
+        <input type="number" id="degrees" value="" min="17" max="32" step="1"><span class="unit">&#176;C</span>
+    </div>
+
+    <div id="fan-speed"><img src="fan.svg" width="20"><span class="ring_1 ring"></span><span class="ring_2 ring"></span><span class="ring_3 ring"></span></div>
+
+    <div id="state">
+        <i class="fas fa-power-off"></i>
+    </div>
+
+    <div id="airflow" class="pulse">
+        <div class="core active"></div>
+        <div class="helper"></div>
+        <div class="boost active"></div>
+        <div class="dir_1 dir"></div>
+        <div class="dir_2 dir"></div>
+        <div class="dir_3 dir"></div>
+        <div class="dir_4 dir"></div>
+        <div class="dir_5 dir"></div>
+        <div class="dir_6 dir"></div>
+    </div>
+</div>
+<script type="text/javascript" src="js.min.js"></script>
+</body>
+</html>
