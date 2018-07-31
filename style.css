@@ -1,12 +1,12 @@
 #remote {
-    border        : 3px solid dimgrey;
+    border        : 3px solid #777;
     border-radius : 12px;
     padding       : 12px;
 }
 
 #mode {
     font-size : 40px;
-    color     : darkgrey;
+    color     : #bbb;
 }
 
 #mode > * {
@@ -35,7 +35,7 @@
 }
 
 #temperature > .unit {
-    color : darkgrey;
+    color : #bbb;
 }
 
 #fan-speed {
@@ -54,7 +54,7 @@
     position      : absolute;
     top           : 0;
     right         : 0;
-    border        : 3px solid darkgrey;
+    border        : 3px solid #bbb;
     border-top    : none;
     border-bottom : none;
 }
@@ -138,14 +138,14 @@
 #airflow .boost {
     width         : 15px;
     height        : 15px;
-    background    : darkgrey;
+    background    : #bbb;
     border-radius : 0 0 0 15px;
 }
 
 #airflow .dir {
     width      : 20px;
     height     : 2px;
-    background : darkgrey;
+    background : #bbb;
     right      : 18px;
 }
 
