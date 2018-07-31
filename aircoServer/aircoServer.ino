@@ -77,6 +77,9 @@ void decodeIrSignal(decode_results *results) {
     }
   }
 
+  // we've made a mess of things, let's fix everything we've destroyed
+  carrier.restoreFillers();
+
   carrier.restoreFromCodes();
 }
 
@@ -171,17 +174,6 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t length
           int fan = root["fan"];
           const char* airflow = root["airflow"];
 
-          Serial.print("State: ");
-          Serial.print(state);
-          Serial.print(" Mode: ");
-          Serial.print(mode);
-          Serial.print(" Temperature: ");
-          Serial.print(temperature);
-          Serial.print(" Fan: ");
-          Serial.print(fan);
-          Serial.print(" Airflow: ");
-          Serial.println(airflow);
-
           if (strcmp(state,  "on") == 0)
             carrier.setState(STATE_on);
           else if (strcmp(state, "off") == 0)
@@ -227,7 +219,9 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t length
             carrier.setFan(FAN_4);
 
           irsend.sendRaw(carrier.codes, CARRIER_BUFFER_SIZE, 38);
+          delay(220);
           irsend.sendRaw(carrier.codes, CARRIER_BUFFER_SIZE, 38);
+          delay(220);
           irsend.sendRaw(carrier.codes, CARRIER_BUFFER_SIZE, 38);
         }
       }
